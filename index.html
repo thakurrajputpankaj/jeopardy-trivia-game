@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jeopardy Game</title>
+    <style>
+        body {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            background-color: rgb(197, 197, 240);
+        }
+
+        img {
+            width: 30%;
+            height: 30%;
+            padding-top: 20px;
+        }
+
+        #board {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 1px;
+            margin: 30px 40px;
+            border: solid;
+        }
+
+        .tile {
+            background-color: blue;
+            color: #FFFFFF;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            border: solid;
+            border-color: black;
+        }
+
+        .categories{
+            background-color: rgb(0, 0, 56);
+            color: #FFFFFF;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            border: solid;
+            border-color: black;
+        }
+
+        .highlighted {
+            background-color: black;
+            color: black;
+            border: solid;
+            border-color: black;
+        }
+
+        #resetBtn {
+            margin-top: 20px;
+            background-color: blueviolet;
+            color: #FFFFFF;
+            padding: 12px;
+            font-size: 18px;
+        }
+
+        #revealQuestion, #revealAnswer{
+            margin: 20px 50px;
+            padding: 10px;
+            border: 1px solid;
+        }
+
+        .answerRow{
+            margin: 5px;
+        }
+
+        #submitBtn{
+            margin: 10px;
+            font-weight: bolder;
+            font-size: 16px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <img src="assets/Jeopardy!_logo.svg">
+    <br>
+    <div id="loadingScreen" class="loading-screen">
+        <p>Loading Please Wait...</p>
+      </div>
+    <div id="board"></div>
+    <div id="revealQuestion"></div>
+    <div id="revealAnswer"></div>
+    <button id="resetBtn">Reset Board</button>
+
+
+    <script src="js/pankaj_moises.js"></script>
+</body>
+
+</html>
